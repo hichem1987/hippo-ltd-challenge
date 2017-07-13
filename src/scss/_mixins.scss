@@ -1,0 +1,73 @@
+/* clearfix for floats */
+
+@mixin clearfix() {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+/* mixin to reset ul */
+@mixin resetList() {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+
+/* mixins for font family and font size */
+
+@mixin applyCheltenham ($size: 20px, $line-height: 20px, $font-weight: normal) {
+    font-family: $font-cheltenham;
+    @if $size !="" {
+        font-size: $size;
+    }
+    // optional line-height
+    @if $line-height !="" {
+        line-height: $line-height;
+    }
+    // optional font-weight
+    @if $font-weight !="" {
+        font-weight: $font-weight;
+    }
+}
+
+@mixin applyDinpro($size: 20px, $line-height: 20px, $font-weight: normal) {
+    font-family: $font-dinpro;
+    @if $size !="" {
+        font-size: $size;
+    }
+    // optional line-height
+    @if $line-height !="" {
+        line-height: $line-height;
+    }
+    // optional font-weight
+    @if $font-weight !="" {
+        font-weight: $font-weight;
+    }
+}
+
+@mixin transparentButton() {
+    background-color: transparent;
+    border: 0 none;
+}
+
+@mixin elCenterPositioning($type: absolute, $direction: both) {
+    position: $type;
+
+    @if $direction == "vertical" {
+        top: 50%;
+
+        transform: translateY(-50%);
+    } @else if $direction == "horizontal" {
+        left: 50%;
+
+        transform: translateX(-50%);
+    } @else {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+}

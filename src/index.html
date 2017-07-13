@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>HIPPO Digital ltd test</title>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <!-- TODO : Dynamize by scss and required -->
+        <link rel="stylesheet"  href="library/css/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet"  href="library/css/bootstrap-datepicker/bootstrap-datepicker.min.css" />        
+        <link rel="stylesheet"  href="library/css/jqueryUIautocomplete/jquery-ui.min.css" />        
+        <link rel="icon" href="http://hippodigital.co.uk/wp-content/uploads/2015/11/cropped-Hippo-Icon-32x32.png" sizes="32x32">
+        <link rel="icon" href="http://hippodigital.co.uk/wp-content/uploads/2015/11/cropped-Hippo-Icon-192x192.png" sizes="192x192">
+        <link rel="apple-touch-icon-precomposed" href="http://hippodigital.co.uk/wp-content/uploads/2015/11/cropped-Hippo-Icon-180x180.png">
+        <meta name="msapplication-TileImage" content="http://hippodigital.co.uk/wp-content/uploads/2015/11/cropped-Hippo-Icon-270x270.png">       
+        <!-- Custom CSS -->
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+    <body ><!--  mobmenu-push-toright -->
+        <main>
+            <div class="level-1">
+
+            </div>
+            <section class="level-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="table-container box-style-border">
+                            <div class="bloc-container">
+                                <h1 class="blue-theme text-center text-uppercase">Hippo Digital Ltd Test</h1>
+                                <ul class="my-new-list resetList">
+                                    <li>
+                                        <span class="list-name head">   
+                                            <span>#</span><span>First Name</span><span>Last name</span><span>Birth date</span><span>Hair color</span><span>Action</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <button class="btn-primary" data-toggle="modal" data-target="#modal-newElement"><span>Add new Person</span></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="level-3">
+
+            </div>
+        </main>
+        <div class="modal fade " id="modal-newElement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="billingForms">
+                            <div class="container-form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h2 >Add new person</h2>
+                                        <form class="form-user" >
+                                            <div class="row ">
+                                                <div class="col-xs-12  ">
+                                                    <div class="form-group ">
+                                                        <label for="firstName">First Name*</label>
+                                                        <input type="text" name="firstName" class="form-control"  required  data-msg-required="Please enter a first name" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group ">
+                                                        <label for="lastName">Last Name*</label>
+                                                        <input type="text" name="lastName" class="form-control"  required  data-msg-required="Please enter a last name" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group ">
+                                                        <label for="birthdate">Birth Date*</label>
+                                                        <div class='input-group date' id='datetimepicker10'>
+                                                            <input type='text' class="form-control" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar">
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group ui-widget">
+                                                        <label for="hairs">Hair Color*</label>
+                                                        <input id="hairs"  name="hairColor" class="form-control"  required  data-msg-required="Please enter a first name" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-xs-12    ">
+                                                    <div  class="form-group clearfix">
+                                                        <div class="required-fields">
+                                                            <span>fields with * are required</span>
+                                                        </div>
+                                                        <div class="text-center clearfix">
+                                                            <button type="button"  class="btn-primary"><span class="btn-text">Submit the new person</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="modal-updateElement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="billingForms">
+                            <div class="container-form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h2>Update Data</h2>
+                                        <form class="form-user" >
+                                            <div class="row ">
+                                                <div class="col-xs-12  ">
+                                                    <div class="form-group ">
+                                                        <label for="firstNameUpdate">First Name*</label>
+                                                        <input ID="firstNameUpdate" type="text" name="firstName" class="form-control"  required  data-msg-required="Please enter a first name" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12  ">
+                                                    <div class="form-group ">
+                                                        <label for="lastNameUpdate">Last Name*</label>
+                                                        <input ID="lastNameUpdate" type="text" name="lastName" class="form-control"  required  data-msg-required="Please enter a last name" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12  ">
+                                                    <div class="form-group ">
+                                                        <label for="birthDateUpdate">Birth Date*</label>
+                                                        <div class='input-group date' id='datetimepicker11'>
+                                                            <input type='text' class="form-control" ID="birthDateUpdate" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar">
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12  ">
+                                                    <div class="form-group ui-widget">
+                                                        <label for="hairsUpdate">Hair Color*</label>
+                                                        <input id="hairsUpdate"  name="hairColor" class="form-control"  required  data-msg-required="Please enter a first name" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-xs-12    ">
+                                                    <div  class="form-group clearfix">
+                                                        <div class="required-fields">
+                                                            <span>fields with * are required</span>
+                                                        </div>
+                                                        <div class="text-center clearfix">
+                                                            <button type="button"  class="btn-primary"><span class="btn-text">Update data</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- inject:js -->
+        <!-- endinject -->
+        <!--scripts from libraries-->
+        <script type="text/javascript" src="library/js/jQueryAutocomplete/jquery-ui.min.js"></script>
+    </body>
+</html>

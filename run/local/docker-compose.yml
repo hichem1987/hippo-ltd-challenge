@@ -1,0 +1,64 @@
+version: '2'
+services:
+  pound:
+    image: easycom/pound
+    mem_limit: 100M
+    links:
+      - web
+    ports:
+      - 80:80     # Expose HTTP
+      - 443:443   # Expose HTTPS
+    volumes:
+      - ./docker-data/pound/cert/:/cert
+      - ./docker-conf/pound/pound.cfg:/pound-config/pound.cfg:ro
+      - ./docker-install/configure-pound.sh:/install.sh:ro
+      - /etc/localtime:/etc/localtime:ro
+
+  web:
+    image: easycom/apache-php:php7-latest
+    tty: true
+    ports:
+      - 9000:9000 # Expose xDebug
+    links:
+      - maildev:mail
+    cap_add:
+      - SYS_PTRACE # Used to trace slow PHP queries
+    volumes:
+      - ./docker-conf/apache:/etc/apache2/sites-enabled
+      - ./docker-conf/apache/index.html:/var/www/default/index.html
+      - ./docker-conf/php/xdebug.ini:/etc/php/7.0/mods-available/xdebug.ini
+      - ./docker-install/configure-web.sh:/install.sh
+      - ./docker-data/logs/apache:/var/log/apache2/
+      - ./docker-data/logs/php:/var/www/logs/
+      - ../../htdocs:/var/www/htdocs
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - FPM_USERNAME=easycom
+      - FPM_UID=1000
+      - FPM_GROUPNAME=users
+      - FPM_GID=100
+  
+  cli:
+    image: easycom/capistrano
+    tty: true
+    volumes:
+      - ../../:/var/www/
+      - ./docker-install/configure-cli.sh:/install.sh
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - FPM_USERNAME=easycom
+      - FPM_UID=1000
+      - FPM_GROUPNAME=users
+      - FPM_GID=100
+    working_dir: "/var/www/htdocs"
+
+  maildev:
+    image: djfarrelly/maildev
+    ports:
+      - "9090:80"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    command:
+      - bin/maildev
+      - --web=80
+      - --smtp=25

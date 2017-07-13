@@ -1,0 +1,28 @@
+{
+  "array" : [
+    {
+  "firstname": "Hichem",
+  "lastname": "Hamdaoui",
+  "datebirth": "1987-12-28",
+  "haircolor":"black"
+  },
+  {
+  "firstname": "marlon",
+  "lastname": "brando",
+  "datebirth": "1920-12-28",
+  "haircolor":"white"
+  },
+  {
+  "firstname": "James",
+  "lastname": "Dean",
+  "datebirth": "1920-11-28",
+  "haircolor":"blond"
+  },
+  {
+  "firstname": "Nicole",
+  "lastname": "Kidman",
+  "datebirth": "1960-12-28",
+  "haircolor":"red"
+  }]
+
+}

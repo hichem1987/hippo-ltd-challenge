@@ -1,0 +1,176 @@
+// helper classes
+.itable {
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    .itableRowGrp {
+        display: table-row-group;
+    }
+    .itableRow {
+        display: table-row;
+    }
+    .itableCell {
+        display: table-cell;
+    }
+}
+
+.iblock {
+    display: inline-block;
+}
+
+/* flex for the win!!!!! */
+.flexContainer {
+    display: flex;
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.spaceBetween {
+        justify-content: space-between;
+    }
+
+}
+
+.vAlignMid {
+    vertical-align: middle;
+}
+
+.vAlignTop {
+    vertical-align: top;
+}
+
+.vAlignBot {
+    vertical-align: bottom;
+}
+.ifloat {
+    float: left;
+}
+
+.ifloatRight {
+    float: right;
+}
+
+.iNofloat {
+    float: none;
+}
+.half-w{
+width: 50%;
+}
+.full-w {
+    width: 100%;
+}
+
+.full-h {
+    height: 100%;
+}
+.paddL-10{
+    padding-left:10px;
+}
+.pos-a {
+    position: absolute;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.pos-s {
+    position: fixed !important;
+}
+
+.clearMargPadd {
+    margin: 0;
+    padding: 0;
+}
+
+.clearBtn {
+    border: 0;
+    background: none;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.clearFloat {
+    clear: both;
+    width:100%;
+    height:1px;
+}
+
+.parentClearBoth {
+    @include clearfix;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+.text-linethrough{
+    text-decoration: line-through;
+}
+/*
+Meant to put css which will be used different part of the site/sections
+and to override bootstrap element globally
+*/
+
+// Remove tn shadow - ipedis button style mostly flat. So we removed box shadow
+.btn-danger,
+.btn-default,
+.btn-info,
+.btn-primary,
+.btn-success,
+.btn-warning {
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.overlap_imgContainer_centered {
+    display: block;
+
+    @include elCenterPositioning;
+}
+
+// class to remove margin (in p tag used for accessibility)
+.noMargin {
+    margin: 0;
+}
+
+.coverP {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+// class to have style-less ul (used for accessibility)
+.resetList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.resetBtn {
+    appearance: initial;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+}
+/*class for text*/
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-center{
+    text-align:center;
+}
+.inline-block{
+display: inline-block;
+}
+.block{
+display: block;
+}
+.removearrow{
+-webkit-appearance: none;
+-moz-appearance: none;
+-o-appearance: none;
+}
+.removearrow::-ms-expand {
+    display: none;
+}

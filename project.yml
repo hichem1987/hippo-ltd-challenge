@@ -1,0 +1,5 @@
+project:
+  name: avc
+  host: avc.montage.local
+  ip: "127.0.0.1"
+  hostfile: /etc/hosts
