@@ -2,6 +2,7 @@
 the technologies used in this project are : HTML5, CSS3 , Bootstrap , SASS , jQuery
 within this package is a `src` directory and a `docs` directory for non-compiled and production ready code.
 the link of this project is <a href='https://hichem1987.github.io/hippo-ltd-challenge/'>click here</a>
+I tried to fellow the instructions in the project file , check the document in the root project "Hippo Interview Test - Front End Developer.pdf".
 ## Installation
 
 Clone or download the repo to your local machine.<br>
